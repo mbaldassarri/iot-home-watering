@@ -1,0 +1,24 @@
+alias: Water Plants - Water Plants at 6am and 8pm
+description: >-
+  Water plants
+triggers:
+  - trigger: time
+    at: "06:00:00"
+  - trigger: time
+    at: "20:00:00"
+conditions: []
+actions:
+  - type: turn_on
+    device_id: <esp_home device id>
+    entity_id: <esp_home entity id>
+    domain: switch
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - type: turn_off
+    device_id: <esp_home device id>
+    entity_id: <esp_home entity id>
+    domain: switch
+mode: single

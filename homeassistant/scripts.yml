@@ -1,0 +1,28 @@
+# This script is for turning on a watering system for a certain time period
+# The watering time is set through an input number entity (input_number.watering_time)
+sequence:
+  - type: turn_on
+    device_id: <esp_home device id>
+    entity_id: <esp_home entity id>
+    domain: switch
+  - delay:
+      minutes: "{{ states('input_number.watering_time') | int }}"
+  - type: turn_off
+    device_id: <esp_home device id>
+    entity_id: <esp_home entity id>
+    domain: switch
+alias: WaterPlants
+description: "Water the plants for a specified duration"
+
+
+
+
+# This script is for stopping the watering system immediately
+# It turns off the watering system without any delay
+sequence:
+  - type: turn_off
+    device_id: <esp_home device id>
+    entity_id: <esp_home entity id>
+    domain: switch
+alias: StopWatering
+description: "Stop watering the plants immediately"

@@ -1,0 +1,33 @@
+- type: masonry
+  path: balcone
+  title: Balcone
+  icon: mdi:sprout
+  cards:
+    - type: custom:mushroom-number-card
+      entity: input_number.watering_time
+      name: Turn on for n minutes
+      layout: vertical
+      fill_container: false
+      display_mode: buttons
+      secondary_info: none
+      icon_type: icon
+    - show_name: true
+      show_icon: true
+      type: button
+      tap_action:
+        action: toggle
+      entity: script.waterplants
+      icon: mdi:play-box
+      icon_height: 50px
+      name: Start
+      show_state: false
+    - show_name: true
+      show_icon: true
+      type: button
+      tap_action:
+        action: toggle
+      entity: script.ferma_irrigazione
+      icon: mdi:stop-circle
+      icon_height: 50px
+      name: Stop
+      show_state: false
