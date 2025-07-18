@@ -168,7 +168,8 @@ This project uses:
   * A **Start Watering** button that respects the selected time
   * A **Stop** button to immediately turn off the pump
 
-![Lovelace Screenshot](images/lovelace.jpeg)
+<div align="center"><img src="images/lovelace.jpeg" width="300" alt="lovelace screenshot"/></div>
+
 ---
 
 ## 🚀 Advanced Features
